@@ -4,7 +4,7 @@ module.exports = {
   tagline: 'All your mods and maps in one place',
   url: 'https://subwaybuildermodded.com',
   baseUrl: '/',
-  favicon: 'img/favicon.ico',
+  favicon: 'favicon.ico',
   organizationName: 'Subway-Builder-Modded', // GitHub org/user
   projectName: 'Subway-Builder-Modded-Docs',
   deploymentBranch: 'gh-pages',
@@ -44,7 +44,7 @@ module.exports = {
       title: 'Subway Builder Docs',
       logo: {
         alt: 'Subway Builder Logo',
-        src: 'img/logo.png',
+        src: 'logo.png',
       },
       items: [
         {

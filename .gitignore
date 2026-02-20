@@ -24,7 +24,5 @@ Thumbs.db
 *.tmp
 *.temp
 
-package-lock.json
-
 *.bak
 *.swp

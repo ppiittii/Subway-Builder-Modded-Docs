@@ -1,4 +1,5 @@
-releases:
-  label: 'Releases'
+releases-fr:
+  label: 'Versions'
   permalink: '/releases'
-  description: 'Changlogs and release notes for the Subway Builder Mod Wiki website.'
+  description: 'Journaux des modifications et notes de version pour le site web du Wiki du Mod Subway Builder.'
+  

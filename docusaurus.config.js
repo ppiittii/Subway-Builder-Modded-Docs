@@ -41,6 +41,7 @@ module.exports = {
           blogTitle: 'Updates',
           blogDescription: 'Changlogs and release notes for the Subway Builder Mod Wiki website.',
           postsPerPage: 1,
+          onUntruncatedBlogPosts: 'ignore',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

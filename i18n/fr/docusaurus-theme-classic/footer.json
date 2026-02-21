@@ -1,0 +1,14 @@
+{
+  "link.title.Pages": {
+    "message": "Pages",
+    "description": "Pages"
+  },
+  "link.title.Other Links": {
+    "message": "Autres liens",
+    "description": "Autres liens"
+  },
+  "copyright": {
+    "message": "© Wiki du Mod Subway Builder 2026",
+    "description": "Droits d'auteur"
+  }
+}

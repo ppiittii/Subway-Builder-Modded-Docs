@@ -30,7 +30,7 @@
 }
 
 html[data-theme='light'] .slideImage {
-  filter: brightness(0.85);
+  filter: brightness(0.75);
 }
 
 .slideImage.active {

@@ -10,6 +10,7 @@ const lightImages = [
   '/images/home-light-stations.png',
   '/images/home-light-stations-secondary.png',
   '/images/home-light-transit.png',
+  '/images/home-light-trains.png',
 ];
 
 const darkImages = [
@@ -18,6 +19,7 @@ const darkImages = [
   '/images/home-dark-stations.png',
   '/images/home-dark-stations-secondary.png',
   '/images/home-dark-transit.png',
+  '/images/home-dark-trains.png',
 ];
 
 export default function Home() {

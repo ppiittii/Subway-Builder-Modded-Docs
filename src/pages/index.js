@@ -113,7 +113,7 @@ export default function Home() {
 
             <Link
               className={`${styles.button} ${styles.primary}`}
-              to="/wiki/guides/map-installation-guide"
+              to="/wiki/maps/map-installation-guide"
             >
               <Translate id="homepage.button.installation">Installation Guide</Translate>
             </Link>

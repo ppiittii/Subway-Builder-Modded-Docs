@@ -4,12 +4,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Maps',
-      items: ['maps/map-directory'],
-    },
-    {
-      type: 'category',
-      label: 'Guides',
-      items: ['guides/map-installation-guide', 'guides/legacy-map-installation-guide'],
+      items: ['maps/map-directory', 'maps/map-installation-guide', 'maps/legacy-map-installation-guide'],
     },
   ],
 };

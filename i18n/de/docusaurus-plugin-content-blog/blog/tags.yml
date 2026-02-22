@@ -1,5 +1,9 @@
-releases-de:
-  label: 'Veröffentlichungen'
+releases:
+  label: 'Versionen'
   permalink: '/releases'
-  description: 'Änderungsprotokolle und Versionshinweise für die Website des Subway Builder Mod Wikis.'
+  description: 'Änderungsprotokolle und Versionshinweise für die Subway Builder Mod Wiki-Website.'
+map-manager:
+  label: 'Kartenmanager'
+  permalink: '/map-manager'
+  description: 'Updates und Versionshinweise für den Subway Builder Kartenmanager.'
   

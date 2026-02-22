@@ -26,7 +26,6 @@ export default function Home() {
   const [index, setIndex] = useState(0);
   const [isDark, setIsDark] = useState(false);
 
-  // Detect dark/light mode changes
   useEffect(() => {
     const observer = new MutationObserver(() => {
       setIsDark(document.documentElement.getAttribute('data-theme') === 'dark');
@@ -38,7 +37,6 @@ export default function Home() {
 
   const images = isDark ? darkImages : lightImages;
 
-  // Preload all images for instant theme switch
   useEffect(() => {
     [...lightImages, ...darkImages].forEach((src) => {
       const img = new Image();
@@ -46,7 +44,6 @@ export default function Home() {
     });
   }, []);
 
-  // Auto slide every 6 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
@@ -64,7 +61,6 @@ export default function Home() {
       image="/logo.png"
     >
       <main className={styles.hero}>
-        {/* Carousel */}
         <div className={styles.carousel}>
           {images.map((src, i) => (
             <img
@@ -75,7 +71,6 @@ export default function Home() {
             />
           ))}
 
-          {/* Controls at bottom */}
           <div className={styles.controls}>
             <button className={styles.arrowButton} onClick={prevSlide}>{'<'}</button>
             <div className={styles.dots}>
@@ -91,7 +86,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Content overlay */}
         <div className={styles.container}>
           <h1 className={styles.title}>
             <Translate id="homepage.heading">Subway Builder Modded Wiki</Translate>
@@ -121,6 +115,8 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
+        <img src="/logo.png" alt="Logo" className={styles.cornerLogo} />
       </main>
     </Layout>
   );

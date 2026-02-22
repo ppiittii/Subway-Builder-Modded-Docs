@@ -39,7 +39,7 @@ module.exports = {
           blogSidebarTitle: 'Updates',
           blogSidebarCount: 'ALL',
           blogTitle: 'Updates',
-          blogDescription: 'Changlogs and release notes for the Subway Builder Mod Wiki website.',
+          blogDescription: 'Changelogs and release notes for the Subway Builder Mod Wiki website.',
           postsPerPage: 1,
           onUntruncatedBlogPosts: 'ignore',
         },

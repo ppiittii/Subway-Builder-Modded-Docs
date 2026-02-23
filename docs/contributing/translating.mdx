@@ -22,17 +22,17 @@ Throughout this guide, YOUR_LOCALE_CODE will refer to the language you are worki
 
 If you want to contribute translations to a language that already exists in the project:
 
-1. Navigate to the folder corresponding to your language in `i18n/YOUR_LOCALE_CODE`. For example, Spanish translations are located in `i18n/es-ES`.
-2. You are responsible for all files in this folder, including but not limited to:
+**1.** Navigate to the folder corresponding to your language in `i18n/YOUR_LOCALE_CODE`. For example, Spanish translations are located in `i18n/es`.
+**2.** You are responsible for all files in this folder, including but not limited to:
  - `code.json`
  - `tags.yml`
  - Any other `.json` or `.yml` files
-3. Ensure that all text is properly translated while keeping the formatting intact (headings, lists, code blocks, notes, tips, admonitions, and images).
-4. Do **not** attempt to translate automatically generated content from Docusaurus updates; these cannot be translated due to limitations in the framework.
-5. PR Requirements:
+**3.** Ensure that all text is properly translated while keeping the formatting intact (headings, lists, code blocks, notes, tips, admonitions, and images).
+**4.** Do **not** attempt to translate the content from `/blogs`; these cannot be translated due to limitations in the framework. However, in the `docusaurus-plugin-content-blog` directory, there may be an `options.json`. This should be translated.
+**5.** PR Requirements:
  - Any PR that anyone merges with the `needs-translating` tag must be translated into your language.  
- - Translation PRs must begin with the prefix `[Translation - YOUR_LOCALE_CODE]`.  
-6. Submit your changes via Pull Request. A wiki maintainer will review your submission before merging.
+ - Translation PRs must begin with the prefix `[Translation - YOUR_LOCALE_CODE]`.
+**6.** Submit your changes via Pull Request. A wiki maintainer will review your submission before merging.
 
 ---
 
@@ -42,8 +42,8 @@ If you want to add a completely new language:
 
 ### Step 1 - Set Up Your Locale {#set-up-your-locale}
 
-1. Open `docusaurus.config.js`.
-2. Add your language to the `localeConfigs` section. Example:
+**1.** Open `docusaurus.config.js`.
+**2.** Add your language to the `localeConfigs` section. Example:
 ```js
 locales: ['en', 'es', 'fr', /* Add your language here */ 'it'],
 localeConfigs: {
@@ -68,7 +68,7 @@ localeConfigs: {
 ```
 
 
-3. Save the file.
+**3.** Save the file.
 
 ### Step 2 - Generate Translation Folders {#generate-translation-folders}
 
@@ -80,9 +80,9 @@ npx docusaurus write-translations --locale YOUR_LOCALE_CODE
 
 ### Step 3 - Organize Your Translation Workspace {#organize-your-translation-workspace}
 
-1. Inside `docusaurus-plugin-content-docs` and `docusaurus-plugin-content-modding-docs`, create a folder called `current`.
-2. Copy all files from `docs/` and `modding-docs/` into `current`.
-3. Begin translating these files. Maintain the original formatting, including:
+**1.** Inside `docusaurus-plugin-content-docs` and `docusaurus-plugin-content-modding-docs`, create a folder called `current`.
+**2.** Copy all files from `docs/` and `modding-docs/` into their respective `current`.
+**3.** Begin translating these files. Maintain the original formatting, including:
  - Headings
  - Lists
  - Code blocks
@@ -90,8 +90,8 @@ npx docusaurus write-translations --locale YOUR_LOCALE_CODE
  - Tips (`:::tip`)
  - Important warnings (`:::important`)
  - Images and captions
-4. Translate all other files in the directory, such as `code.json` and `tags.yml`.
-5. Remember that links, page IDs, names, and image references **should not be translated**.
+**4.** Translate all other files in the directory, such as `code.json` and `tags.yml`.
+**5.** Remember that links, page IDs, names, and image references **should not be translated**.
 
 ### Step 4 - Submit Your PR {#submit-your-pr}
 
@@ -114,7 +114,7 @@ Docusaurus uses `i18n` to manage translations, and our wiki uses MDX for enhance
    - Page header (`id` and `title`) must remain unchanged except for translated titles.
    - Lists, headings, code blocks, and blockquotes must remain consistent.
    - Admonitions (notes, tips, important warnings):
-```
+```md
 :::note
 This is a note. You may translate the text inside.
 :::
@@ -194,19 +194,17 @@ Here are details for the currently supported languages:
 
 ## Important Notes {#important-notes}
 
- - **Pull Requests Required:** All translations must be submitted via PR and reviewed by a wiki maintainer.  
- - **PR Naming:** Translation PRs must start with `[Translation - YOUR_LOCALE_CODE]`.  
- - **Needs-Translating Tag:** Any PR merged with the `needs-translating` tag must be translated by contributors.  
- - **Formatting Matters:** Maintain code blocks, notes, headings, lists, and image references exactly as in the original files.  
- - **Responsibility:** Translators are fully responsible for the accuracy and completeness of their language folder.  
- - **Updates Limitations:** Automatic updates from Docusaurus cannot be translated; focus on manual translation of content.  
+ - **Pull Requests Required:** All translations must be submitted via PR and reviewed by a wiki maintainer.
+ - **PR Naming:** Translation PRs must start with `[Translation - YOUR_LOCALE_CODE]`.
+ - **Needs-Translating Tag:** Any PR merged with the `needs-translating` tag needs translating by contributors.
+ - **Formatting Matters:** Maintain code blocks, notes, headings, lists, and image references exactly as in the original files.
 
 ---
 
 ## Updating Translations {#updating-translations}
 
-1. Pull the latest changes from the main branch.
-2. Review any new or updated files in `docs/` and `modding-docs/`.
-3. Translate any new content in your language folder.
-4. Submit updates via PR using the `[Translation - YOUR_LOCALE_CODE]` prefix.
-5. Repeat the review process with a wiki maintainer before merging.
+**1.** Pull the latest changes from the main branch.
+**2.** Review any new or updated files in `docs/` and `modding-docs/`.
+**3.** Translate any new content in your language folder.
+**4.** Submit updates via PR using the `[Translation - YOUR_LOCALE_CODE]` prefix.
+**5.** Repeat the review process with a wiki maintainer before merging.

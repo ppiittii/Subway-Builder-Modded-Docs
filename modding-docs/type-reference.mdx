@@ -1,13 +1,11 @@
 ---
 id: type-reference
-title: Type reference
+title: Type Reference
 ---
-
-# Type reference
 
 The template includes full TypeScript type definitions for the Subway Builder Modding API v1.0.0. Here's how they're organized.
 
-## File structure
+## File Structure
 
 Types are split across multiple `.d.ts` files in `src/types/`, grouped by API namespace:
 
@@ -39,7 +37,7 @@ Types are split across multiple `.d.ts` files in `src/types/`, grouped by API na
 The build/storage API types are listed on the official API documentation but are currently unusable at runtime.
 :::
 
-## How it works
+## How It Works
 
 `index.d.ts` re-exports everything and declares the global `Window` interface:
 
@@ -55,9 +53,9 @@ declare global {
 
 This gives you full autocomplete when you type `window.SubwayBuilderAPI.` in your editor.
 
-## Key types at a glance
+## Key Types at a Glance
 
-### Game entities
+### Game Entities
 
 ```ts
 interface Station {
@@ -100,7 +98,7 @@ interface Train {
 }
 ```
 
-### Core primitives
+### Core Primitives
 
 ```ts
 type Coordinate = [number, number]; // [longitude, latitude]
@@ -109,7 +107,7 @@ type GameSpeed = 'slow' | 'normal' | 'fast' | 'ultrafast';
 type BuildType = 'blueprint' | 'built';
 ```
 
-### UI types
+### UI Types
 
 ```ts
 type UIPlacement =
@@ -127,7 +125,7 @@ type UIPlacement =
 type NotificationType = 'success' | 'error' | 'info' | 'warning';
 ```
 
-## Extending types
+## Extending Types
 
 If you need to extend the API types (e.g., adding fields you've discovered at runtime), you can use TypeScript declaration merging in your own `.d.ts` file:
 
@@ -140,6 +138,6 @@ declare module './game-state' {
 }
 ```
 
-## Official documentation
+## Official Documentation
 
 For the most up-to-date API reference, see the [official Subway Builder modding docs](https://www.subwaybuilder.com/docs/v1.0.0).

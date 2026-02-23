@@ -1,4 +1,3 @@
-/* ── Theme tokens ── */
 :root {
   --home-surface: #ffffff;
   --home-surface-hover: #f5f6f7;
@@ -21,21 +20,16 @@
   --home-img-bg: #1b1b1d;
 }
 
-/* MTA palette (constant across themes) */
-/* blue #0039A6 | orange #FF6319 | green #00933C | yellow #FCCC0A */
-
-/* ── Page ── */
 .page {
   display: flex;
   flex-direction: column;
   color: var(--home-text);
   padding: clamp(10px, 1.8vw, 20px);
   gap: clamp(8px, 1.2vw, 14px);
-  height: calc(100vh - 60px); /* below navbar */
+  height: calc(100vh - 60px);
   overflow: hidden;
 }
 
-/* ── Content grid ── */
 .content {
   flex: 1;
   min-height: 0;
@@ -50,7 +44,6 @@
   }
 }
 
-/* ── Section headers ── */
 .sectionHeader {
   display: flex;
   align-items: center;
@@ -73,7 +66,6 @@
   background: var(--home-border);
 }
 
-/* ── Badge ── */
 .badge {
   width: clamp(24px, 3vw, 32px);
   height: clamp(24px, 3vw, 32px);
@@ -89,16 +81,11 @@
   color: #fff;
 }
 
-.badgeMaps {
-  background: #ff6319;
-}
+.badgeMaps { background: #ff6319; }
+.badgeMods { background: #00933c; }
 
-.badgeMods {
-  background: #00933c;
-}
-
-/* ── Maps section ── */
-.mapsSection {
+.mapsSection,
+.moddingSection {
   display: flex;
   flex-direction: column;
   gap: clamp(8px, 1.2vw, 14px);
@@ -118,14 +105,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
-}
-
-/* ── Modding section ── */
-.moddingSection {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(8px, 1.2vw, 14px);
-  min-height: 0;
 }
 
 .moddingCard {
@@ -166,7 +145,6 @@
   -webkit-box-orient: vertical;
 }
 
-/* ── Card (shared) ── */
 .card {
   background: var(--home-surface);
   border-radius: 8px;
@@ -216,46 +194,22 @@
   flex-shrink: 0;
 }
 
-.cardTitle {
-  margin: 0;
-  font-size: clamp(12px, 1.3vw, 15px);
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--home-text);
-}
-
-.cardDesc {
-  margin: 0;
-  font-size: clamp(10px, 1vw, 12.5px);
-  line-height: 1.45;
-  color: var(--home-text-muted);
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-
-.cardLinkMaps {
+.cardLinkMaps,
+.cardLinkMods {
   font-size: clamp(10px, 1.1vw, 12.5px);
   font-weight: 600;
-  color: #ff6319;
   display: inline-flex;
   align-items: center;
   gap: 4px;
   margin-top: 2px;
+  transition: color 0.15s;
 }
 
-.cardLinkMods {
-  font-size: clamp(11px, 1.2vw, 13px);
-  font-weight: 600;
-  color: #00933c;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  margin-top: 2px;
+.cardLinkMaps:hover,
+.cardLinkMods:hover {
+  filter: brightness(0.85);
 }
 
-/* ── Footer bars ── */
 .footerBars {
   display: flex;
   justify-content: center;

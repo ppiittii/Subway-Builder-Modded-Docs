@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "@theme/Layout";
 import { translate } from "@docusaurus/Translate";
 import styles from "../../css/templatemodupdate.module.css";
+import Link from "@docusaurus/Link";
 
 const UPDATES = [
   {
@@ -15,27 +16,29 @@ const UPDATES = [
 ];
 
 function Tag({ tag, isLatest }) {
-  const type = tag === "beta" ? "beta" : "release";
-  const style =
-    type === "release"
-      ? { backgroundColor: "#00933C", color: "#fff" }
-      : { backgroundColor: "#FCCC0A", color: "#000" };
-
   return (
     <div style={{ display: "flex", gap: "8px" }}>
       {isLatest && (
-        <span className={styles.tag} style={{ backgroundColor: "#D32F2F", color: "#fff" }}>
+        <span
+          className={styles.tag}
+          style={{
+            backgroundColor: "#1335A1",
+            color: "#fff !important",
+          }}
+        >
           LATEST
         </span>
       )}
-      <span className={styles.tag} style={style}>
-        {type.toUpperCase()}
+      <span
+        className={`${styles.tag} ${tag === "beta" ? styles.betaTag : styles.releaseTag}`}
+      >
+        {tag.toUpperCase()}
       </span>
     </div>
   );
 }
 
-export default function MapManagerHub() {
+export default function TemplateModHub() {
   const sortedUpdates = [...UPDATES].reverse();
 
   return (
@@ -44,6 +47,11 @@ export default function MapManagerHub() {
       description={translate({ id: "updates.template-mod.pageDescription", message: "Changelogs and release notes for the Subway Builder Template Mod." })}
     >
       <div className={styles.page}>
+
+        <Link to="/updates" className={styles.floatingBack}>
+          &larr; Back
+        </Link>
+
         <div className={styles.container}>
           <div className={styles.headerCenter}>
             <h1 className={styles.pageTitle}>

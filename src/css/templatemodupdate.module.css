@@ -331,6 +331,16 @@
   font-size: clamp(12px, 1vw, 14px);
 }
 
+.updateBox .betaTag {
+  color: #000 !important;
+  background-color: #F5CF46;
+}
+
+.updateBox .releaseTag {
+  color: #fff !important;
+  background-color: #00933C;
+}
+
 .fullWidthWrapper {
   display: flex;
   flex-direction: column;
@@ -356,4 +366,64 @@
 .updateBox * {
   text-decoration: none !important;
   color: inherit !important;
+}
+
+.floatingBack {
+  position: fixed;
+  top: 70px;
+  left: 24px;
+  padding: 8px 12px;
+  background-color: #ddd;
+  color: #000;
+  font-weight: 700;
+  border-radius: 8px;
+  z-index: 9999;
+  text-decoration: none !important; /* force no underline */
+  transition: transform 0.2s ease, background 0.15s, color 0.15s;
+  display: inline-block;
+}
+
+.floatingBack:hover,
+.floatingBack:focus,
+.floatingBack:active {
+  background-color: #eee;
+  transform: scale(1.1);
+  text-decoration: none !important;
+}
+
+[data-theme="dark"] .floatingBack {
+  background-color: #333;
+  color: #fff;
+  text-decoration: none !important;
+}
+
+[data-theme="dark"] .floatingBack:hover,
+[data-theme="dark"] .floatingBack:focus,
+[data-theme="dark"] .floatingBack:active {
+  background-color: #222;
+  transform: scale(1.05);
+  text-decoration: none !important;
+}
+
+.titleBulletLink {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.titleBulletLink .titleBullet {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.titleBulletLink .titleBullet:hover {
+  transform: scale(1.1);
+}
+
+.titleBulletText {
+  color: #fff;
+  font-weight: 700;
+  display: block;
+  white-space: nowrap;
+  text-align: center;
+  pointer-events: none;
 }
